@@ -193,7 +193,6 @@ section{
 
 .card{
     background:#faf7f2;
-
     border:1px solid #e8ddd1;
 
     padding:40px 30px;
@@ -242,6 +241,48 @@ section{
 
 .gallery img:hover{
     transform:scale(1.02);
+}
+
+/* TREATMENTS */
+
+.treatments-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-top:70px;
+}
+
+.treatment-card{
+    background:#faf7f2;
+    border:1px solid #eadfd2;
+    border-radius:14px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.treatment-card:hover{
+    transform:translateY(-6px);
+}
+
+.treatment-card img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+}
+
+.treatment-content{
+    padding:30px;
+}
+
+.treatment-content h3{
+    font-family:'Playfair Display', serif;
+    color:#8f7157;
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.treatment-content p{
+    font-size:17px;
 }
 
 /* FOOTER */
@@ -315,6 +356,7 @@ footer{
         <li><a href="#about">O salonu</a></li>
         <li><a href="#services">Storitve</a></li>
         <li><a href="#gallery">Galerija</a></li>
+        <li><a href="#treatments">Nega</a></li>
         <li><a href="#contact">Kontakt</a></li>
 
     </ul>
@@ -463,6 +505,119 @@ footer{
         <img src="slika4.jpg">
         <img src="slika5.jpg">
         <img src="slika6.jpg">
+
+    </div>
+
+</section>
+
+<section id="treatments">
+
+    <div class="gallery-header">
+
+        <div class="section-title">
+            Nega las & rituali
+        </div>
+
+        <div class="line" style="margin:auto;"></div>
+
+        <p style="
+        max-width:800px;
+        margin:auto;
+        margin-top:30px;
+        font-size:18px;
+        ">
+            Profesionalne Keune nege in rituali za obnovo,
+            sijaj, zaščito in popolno nego las ter lasišča.
+        </p>
+
+    </div>
+
+    <div class="treatments-grid">
+
+        <div class="treatment-card">
+
+            <img src="nega1.png">
+
+            <div class="treatment-content">
+
+                <h3>Ritual z vročo brisačo</h3>
+
+                <p>
+                    Idealna nega za suhe, puste in
+                    utrujene lase brez sijaja.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="treatment-card">
+
+            <img src="nega2.png">
+
+            <div class="treatment-content">
+
+                <h3>Notranja moč</h3>
+
+                <p>
+                    Obnova lasnih vezi za poškodovane,
+                    lomljive in kemično obdelane lase.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="treatment-card">
+
+            <img src="nega3.png">
+
+            <div class="treatment-content">
+
+                <h3>Zaščita & sijaj</h3>
+
+                <p>
+                    Popolna izbira za gladkost,
+                    svilnat videz in zaščito blond las.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="treatment-card">
+
+            <img src="nega4.png">
+
+            <div class="treatment-content">
+
+                <h3>Preliv & sijaj</h3>
+
+                <p>
+                    Osvežitev barve in luksuzen sijaj
+                    brez popolnega barvanja.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="treatment-card">
+
+            <img src="nega5.png">
+
+            <div class="treatment-content">
+
+                <h3>Keune nega</h3>
+
+                <p>
+                    Profesionalna nega las in lasišča
+                    z vrhunskimi Keune izdelki.
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
 
