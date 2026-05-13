@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>House of Hair</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    background:#f5f1eb;
+    color:#4a4038;
+    line-height:1.7;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:25px 10%;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+
+    z-index:1000;
+}
+
+.logo-nav{
+    font-family:'Playfair Display', serif;
+    color:white;
+    font-size:28px;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#d8c3ac;
+}
+
+/* HERO */
+
+header{
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url('salon.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+    padding:20px;
+}
+
+.hero{
+    max-width:800px;
+}
+
+.hero h1{
+    font-family:'Playfair Display', serif;
+    font-size:82px;
+    font-weight:600;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:650px;
+    margin:auto;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+
+    padding:16px 40px;
+
+    background:#d8c3ac;
+    color:#4a4038;
+
+    text-decoration:none;
+
+    border-radius:5px;
+
+    font-size:14px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* SECTIONS */
+
+section{
+    padding:110px 10%;
+}
+
+.section-title{
+    font-family:'Playfair Display', serif;
+    font-size:60px;
+    color:#9c7b5d;
+    margin-bottom:20px;
+}
+
+.line{
+    width:70px;
+    height:1px;
+    background:#b89f84;
+    margin-bottom:40px;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-text p{
+    margin-bottom:25px;
+    font-size:18px;
+}
+
+.about img{
+    width:100%;
+    border-radius:12px;
+}
+
+/* SERVICES */
+
+.services-header{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#faf7f2;
+
+    border:1px solid #e8ddd1;
+
+    padding:40px 30px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    font-family:'Playfair Display', serif;
+    color:#9c7b5d;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+/* GALLERY */
+
+.gallery-header{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.02);
+}
+
+/* FOOTER */
+
+footer{
+    background:#d8c7b5;
+    color:white;
+
+    text-align:center;
+
+    padding:80px 10%;
+}
+
+.contact{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+
+    margin-top:40px;
+}
+
+.contact p{
+    font-size:16px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:46px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo-nav">
+        HOUSE OF HAIR
+    </div>
+
+    <ul>
+
+        <li><a href="#about">O salonu</a></li>
+        <li><a href="#services">Storitve</a></li>
+        <li><a href="#gallery">Galerija</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+
+    </ul>
+
+</nav>
+
+<header>
+
+    <div class="hero">
+
+        <h1>HOUSE OF HAIR</h1>
+
+        <p>
+            Moderen frizerski salon za moške, ženske in otroke.
+            Ustvarjamo moderne pričeske, popolna barvanja
+            ter videz, ki poudari vašo samozavest in stil.
+        </p>
+
+        <a href="tel:068183605" class="btn">
+            Pokliči zdaj
+        </a>
+
+        <br>
+
+        <a href="https://instagram.com/houseofhairslovenia" target="_blank" class="btn">
+            Instagram
+        </a>
+
+    </div>
+
+</header>
+
+<section id="about">
+
+    <div class="about">
+
+        <div class="about-text">
+
+            <div class="section-title">
+                O salonu
+            </div>
+
+            <div class="line"></div>
+
+            <p>
+                House of Hair je sodoben frizerski salon,
+                kjer združujemo eleganco, kreativnost
+                in profesionalen pristop.
+            </p>
+
+            <p>
+                Poskrbimo za moške, ženske in otroke
+                ter ustvarjamo pričeske, prilagojene
+                vsakemu posamezniku.
+            </p>
+
+            <p>
+                Nudimo klasična in moderna striženja,
+                barvanja, podaljševanje ter zgostitve las
+                v prijetnem in modernem ambientu.
+            </p>
+
+        </div>
+
+        <img src="about.jpg">
+
+    </div>
+
+</section>
+
+<section id="services">
+
+    <div class="services-header">
+
+        <div class="section-title">
+            Storitve
+        </div>
+
+        <div class="line" style="margin:auto;"></div>
+
+    </div>
+
+    <div class="services">
+
+        <div class="card">
+
+            <h3>Moško striženje</h3>
+
+            <p>
+                Moderna in klasična moška striženja.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Žensko striženje</h3>
+
+            <p>
+                Profesionalno oblikovanje pričesk za vsak stil.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Barvanje las</h3>
+
+            <p>
+                Balayage, prameni, osvežitve barve in modne tehnike.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Podaljševanje las</h3>
+
+            <p>
+                Kakovostno podaljševanje in zgostitev las.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="gallery">
+
+    <div class="gallery-header">
+
+        <div class="section-title">
+            Galerija
+        </div>
+
+        <div class="line" style="margin:auto;"></div>
+
+    </div>
+
+    <div class="gallery">
+
+        <img src="slika1.jpg">
+        <img src="slika2.jpg">
+        <img src="slika3.jpg">
+        <img src="slika4.jpg">
+        <img src="slika5.jpg">
+        <img src="slika6.jpg">
+
+    </div>
+
+</section>
+
+<footer id="contact">
+
+    <div class="section-title" style="color:white;">
+        Kontakt
+    </div>
+
+    <div class="contact">
+
+        <p>
+            📍 Starše 78
+        </p>
+
+        <p>
+            📞 068 183 605
+        </p>
+
+        <p>
+            ✉️ houseofhairslo@gmail.com
+        </p>
+
+        <p>
+            Instagram: @houseofhairslovenia
+        </p>
+
+        <p>
+            Facebook: Houseofhair Jan Ivančič
+        </p>
+
+        <p>
+            Delovni čas: po dogovoru
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>
